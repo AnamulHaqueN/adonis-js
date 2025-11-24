@@ -1,12 +1,3 @@
-/*
-|--------------------------------------------------------------------------
-| Routes file
-|--------------------------------------------------------------------------
-|
-| The routes file is used for defining the HTTP routes.
-|
-*/
-
 import router from '@adonisjs/core/services/router'
 
 router.get('/', async () => {
@@ -16,6 +7,22 @@ router.get('/', async () => {
   }
 })
 
+
+router.post('api/login', async () => {
+  // await auth.use('web').login
+  return {
+    message: 'Hello afsar',
+    error: 'should i show errors',
+  }
+})
+
+
+router.get('/api/dashboard', async () => {
+  return {
+    home: 'I am at dashboard',
+    error: 'No error'
+  }
+})
 
 
 router.get('/api/employee', async () => {
